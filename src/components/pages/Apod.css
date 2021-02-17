@@ -1,0 +1,110 @@
+.Apod {
+  font-size: 16px;
+}
+
+.Apod h2 {
+  color: hsl(196, 75%, 78%);
+}
+
+.Apod div {
+  box-sizing: border-box;
+  /* border: 1px solid red; */
+}
+
+.Apod .centered-content {
+  max-width: 1500px;
+  margin: auto;
+}
+
+.Apod .content-flex {
+  display: flex;
+  flex-direction: row;
+  margin: 0 20px;
+  height: 800px;
+}
+
+.Apod .content-flex > div {
+  margin: 10px;
+}
+
+.Apod .content-flex .image-div {
+  flex-grow: 1;
+}
+
+.Apod .content-flex .image-div img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.Apod .content-flex .description-div {
+  flex-basis: 400px;
+  text-align: left;
+  overflow-y: auto;
+}
+
+.Apod .content-flex .description-div .title {
+  margin-top: 0;
+}
+
+span > .react-loading-skeleton {
+  background-image: none;
+  background-color: hsl(0, 0%, 30%);
+}
+
+/* Desktops and laptops ----------- */
+@media only screen  and (max-width : 1200px) {
+  .Apod .content-flex {
+    margin: 0 15px;
+    height: 700px;
+  }
+  .Apod .content-flex .description-div {
+    flex-basis: 300px;
+    text-align: left;
+  }
+}
+
+/* Small screens ----------- */
+@media only screen  and (max-width : 1024px) {
+  .Apod {
+    font-size: 15px;
+  }
+  .Apod .content-flex {
+    margin: 0 10px;
+    height: 600px;
+  }
+}
+
+/* Tablets ----------- */
+@media only screen  and (max-width : 768px) {
+  .Apod {
+    font-size: 14px;
+  }
+  .Apod .content-flex {
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+  }
+  .Apod .content-flex .image-div {
+    flex-basis: 450px;
+  }
+  .Apod .content-flex .description-div {
+    overflow-y: visible;
+  }
+}
+
+/* Mobile devices ----------- */
+@media only screen  and (max-width : 480px) {
+  .Apod {
+    font-size: 13px;
+  }
+  .Apod h1 {
+    font-size: 1.6em;
+  }
+  .Apod h2 {
+    font-size: 1.4em;
+  }
+  .Apod .content-flex .image-div {
+    flex-basis: 270px;
+  }
+}
