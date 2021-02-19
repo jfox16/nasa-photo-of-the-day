@@ -27,10 +27,6 @@
   margin: 10px;
 }
 
-.Apod .content-flex .image-div {
-  flex-grow: 1;
-}
-
 .Apod .content-flex .image-div img {
   width: 100%;
   height: 100%;
@@ -41,6 +37,7 @@
   flex-basis: 400px;
   text-align: left;
   overflow-y: auto;
+  flex-grow: 1;
 }
 
 .Apod .content-flex .description-div .title {
@@ -59,7 +56,6 @@ span > .react-loading-skeleton {
     height: 700px;
   }
   .Apod .content-flex .description-div {
-    flex-basis: 300px;
     text-align: left;
   }
 }
@@ -70,8 +66,12 @@ span > .react-loading-skeleton {
     font-size: 15px;
   }
   .Apod .content-flex {
-    margin: 0 10px;
-    height: 600px;
+    flex-direction: column;
+    margin: 0;
+    height: auto;
+  }
+  .Apod .content-flex .image-div {
+    flex-basis: 500px;
   }
 }
 
@@ -79,11 +79,6 @@ span > .react-loading-skeleton {
 @media only screen  and (max-width : 768px) {
   .Apod {
     font-size: 14px;
-  }
-  .Apod .content-flex {
-    flex-direction: column;
-    margin: 0;
-    height: auto;
   }
   .Apod .content-flex .image-div {
     flex-basis: 450px;
